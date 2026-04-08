@@ -1,128 +1,162 @@
-export const translations = {
-  ru: {
-    title: "Art Quest",
-    author: "ELIZAVETA ALEKSEEVA 2026",
-    score: "Счет",
-    back: "Назад",
-    showAnswer: "Показать ответ",
-    correct: "Верно (+{points})",
-    incorrect: "Неверно",
-    finalRound: "Финальный раунд",
-    startFinal: "Перейти к финальному вопросу",
-    congrats: "Поздравляем!",
-    finalScore: "Ваш итоговый счет",
-    restart: "Начать заново",
-    categories: {
-      hidden: "Скрытые детали",
-      arch: "Архитектура",
-      color: "Цвет в искусстве",
-      sculpt: "Скульптура",
-      auctions: "Аукционные страсти"
-    },
-    questions: {
-      hidden: [
-        { q: "На картине «Мона Лиза» у героини отсутствуют именно эти элементы лица, что долгое время считалось загадкой.", a: "Брови", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/402px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" },
-        { q: "В 2011 году под микроскопом в правом зрачке Джоконды обнаружили эти две латинские буквы.", a: "LV (Леонардо да Винчи)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800" },
-        { q: "На полотне «Ночной дозор» среди толпы выделяется девочка. К ее поясу прикреплена именно эта птица.", a: "Курица (символ отряда)", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Night_Watch_-_de_nachtwacht.jpg/1200px-The_Night_Watch_-_de_nachtwacht.jpg" },
-        { q: "В нижней части картины «Послы» Ганса Гольбейна под углом открывается это скрытое изображение.", a: "Череп", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/1200px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg" },
-        { q: "На картине «Ночная терраса кафе» Ван Гога некоторые видят зашифрованную сцену из Евангелия. Какую?", a: "Тайная вечеря", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Vincent_Willem_van_Gogh_-_Caf%C3%A9_Terrace_at_Night_-_Google_Art_Project.jpg/800px-Vincent_Willem_van_Gogh_-_Caf%C3%A9_Terrace_at_Night_-_Google_Art_Project.jpg" }
-      ],
-      arch: [
-        { q: "Стиль XII–XV веков, получивший название от германских племен.", a: "Готика", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1548545595-59b4349479b0?w=800" },
-        { q: "Как называется тип башни, к которому относится Пизанская башня?", a: "Кампанила (колокольня)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=800" },
-        { q: "Это здание в Париже строилось как церковь, но стало усыпальницей великих людей Франции.", a: "Пантеон", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1503917988258-f197e2f4191b?w=800" },
-        { q: "Верхняя женская часть греческого храма или фигура женщины, заменяющая колонну?", a: "Кариатида", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1603566233405-f9383637e1b5?w=800" },
-        { q: "Архитектор-модернист, сказавший: «Дом — это машина для жилья».", a: "Ле Корбюзье", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Le_Corbusier_cropped.jpg/800px-Le_Corbusier_cropped.jpg" }
-      ],
-      color: [
-        { q: "Самый дорогой цвет Ренессанса, добываемый из лазурита.", a: "Ультрамарин (синий)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800" },
-        { q: "В какой период творчества Пикассо писал нищих и акробатов в холодных тонах?", a: "Голубой период", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Old_guitarist_chicago.jpg/800px-Old_guitarist_chicago.jpg" },
-        { q: "Художник, запатентовавший свой ярко-синий оттенок.", a: "Ив Кляйн", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/International_Klein_Blue.jpg/400px-International_Klein_Blue.jpg" },
-        { q: "Картина «Пир Валтасара» этого автора начала стремительно чернеть из-за ошибки в краске.", a: "Рембрандт", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rembrandt-Belsazar.jpg/1200px-Rembrandt-Belsazar.jpg" },
-        { q: "Техника живописи из множества мелких точек чистого цвета.", a: "Пуантилизм", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800" }
-      ],
-      sculpt: [
-        { q: "Античная статуя, лишившаяся рук во время потасовки на острове Милос.", a: "Венера Милосская", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1549887534-1541e9326642?w=800" },
-        { q: "Из какого материала Микеланджело изваял своего «Давида»?", a: "Мрамор", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=800" },
-        { q: "Скульптура Родена, вдохновленная «Божественной комедией» Данте.", a: "«Мыслитель»", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1605646199464-9464406cc0a7?w=800" },
-        { q: "Техника отливки, при которой восковая модель расплавляется и вытекает.", a: "Метод утраченного воска", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1554188248-986adbb73be4?w=800" },
-        { q: "Скульптор ХХ века, известный «тощими», вытянутыми фигурами.", a: "Альберто Джакометти", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Walking_Man_I.jpg/300px-Walking_Man_I.jpg" }
-      ],
-      auctions: [
-        { q: "Картина этого «безумного» голландца в 1990 году стала самой дорогой в мире.", a: "Винсент Ван Гог", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=800" },
-        { q: "Картина какого анонимного художника самоуничтожилась шредером в 2018 году?", a: "Бэнкси", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800" },
-        { q: "Самая дорогая картина в истории ($450 млн), приписываемая Леонардо.", a: "«Спаситель мира»", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/1200px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg" },
-        { q: "Серия картин Моне, чаще всего ставящая рекорды на торгах.", a: "«Стога» или «Кувшинки»", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1576016773322-80c2793d7e5f?w=800" },
-        { q: "Основатель какого аукционного дома начинал как книготорговец в 1744 году?", a: "Sotheby’s", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sothebys_London_2011.jpg/800px-Sothebys_London_2011.jpg" }
-      ]
-    },
-    finalQuestion: {
-      q: "Какому американскому архитектору китайского происхождения принадлежит проект стеклянной пирамиды, ставшей современным символом Лувра?",
-      a: "Бэй Юймин (I. M. Pei)",
-      img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200"
-    }
+
+export type Language = 'en' | 'ru';
+
+export interface Question {
+  id: string;
+  category: string;
+  points: number;
+  question: string;
+  answer: string;
+  isAnswered: boolean;
+  imageUrl: string;
+}
+
+export const CATEGORIES = {
+  en: [
+    { name: 'Hidden Details', id: 'hd' },
+    { name: 'Architecture', id: 'ar' },
+    { name: 'Color in Art', id: 'ca' },
+    { name: 'Sculpture', id: 'sc' },
+    { name: 'Auction Passions', id: 'ap' },
+  ],
+  ru: [
+    { name: 'Скрытые детали', id: 'hd' },
+    { name: 'Архитектура', id: 'ar' },
+    { name: 'Цвет в искусстве', id: 'ca' },
+    { name: 'Скульптура', id: 'sc' },
+    { name: 'Аукционные страсти', id: 'ap' },
+  ]
+};
+
+export const QUESTIONS_DATA = {
+  en: [
+    // Hidden Details
+    { id: 'hd100', category: 'Hidden Details', points: 100, question: "In the 'Mona Lisa', the subject is missing these facial features, which was long considered a mystery, though they likely just wore off during cleaning.", answer: "Eyebrows", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1544767618-c5ef3d845ad4?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd200', category: 'Hidden Details', points: 200, question: "In 2011, under a microscope, these two Latin letters were found in the right pupil of the Mona Lisa, likely the author's initials.", answer: "LV (Leonardo da Vinci)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1627444211158-b0a70f3f20d6?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd300', category: 'Hidden Details', points: 300, question: "In Rembrandt's 'The Night Watch', a brightly lit girl stands out among the musketeers. This specific bird is attached to her belt.", answer: "Chicken (symbol of the militia)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd400', category: 'Hidden Details', points: 400, question: "Examining Hans Holbein's 'The Ambassadors' from a specific angle reveals that the strange smudge at the bottom is actually a...", answer: "Skull", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd500', category: 'Hidden Details', points: 500, question: "Some researchers see an encoded scene from the Gospel in Van Gogh's 'Café Terrace at Night'. Which one?", answer: "The Last Supper", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=800&auto=format&fit=crop" },
+    
+    // Architecture
+    { id: 'ar100', category: 'Architecture', points: 100, question: "This style, which dominated Europe from the 12th to 15th centuries, got its name from Germanic tribes, though they had nothing to do with it.", answer: "Gothic", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1548560781-a7a07d9d33db?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar200', category: 'Architecture', points: 200, question: "The famous 'Leaning' tower in Pisa is actually part of a cathedral complex. What is the architectural term for such a bell tower?", answer: "Campanile", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1543429776-067bb207185c?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar300', category: 'Architecture', points: 300, question: "Originally built as the Church of Saint Genevieve, this Parisian building eventually became a mausoleum for France's great figures.", answer: "Panthéon", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1590429448256-c3a4405aef75?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar400', category: 'Architecture', points: 400, question: "What is the name for a female figure used as a supporting column in Greek architecture?", answer: "Caryatid", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1605333396915-47ed6b68a00e?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar500', category: 'Architecture', points: 500, question: "This modernist architect famously stated: 'A house is a machine for living in'.", answer: "Le Corbusier", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" },
+
+    // Color in Art
+    { id: 'ca100', category: 'Color in Art', points: 100, question: "This color was the most expensive during the Renaissance because it was made from the semi-precious stone lapis lazuli.", answer: "Ultramarine (Blue)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1576444399940-058864005391?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca200', category: 'Color in Art', points: 200, question: "During his 'Blue Period', this artist painted beggars and acrobats in cold tones due to deep depression.", answer: "Pablo Picasso", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca300', category: 'Color in Art', points: 300, question: "Which artist is considered the inventor of 'anthropometry', where he used a patented bright blue shade?", answer: "Yves Klein", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca400', category: 'Color in Art', points: 400, question: "In 1814, due to an error in the paint composition, 'Belshazzar's Feast' by this author began to rapidly blacken. Who is the author?", answer: "Rembrandt", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1582201942988-13e60e4556ee?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca500', category: 'Color in Art', points: 500, question: "What is the painting technique where a picture is created from many small dots of pure color?", answer: "Pointillism", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1578321272176-b7bbc067985c?q=80&w=800&auto=format&fit=crop" },
+
+    // Sculpture
+    { id: 'sc100', category: 'Sculpture', points: 100, question: "This ancient statue lost its arms during a scuffle between French sailors and Turkish authorities on the island of Milos.", answer: "Venus de Milo", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1549887534-1541e9326642?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc200', category: 'Sculpture', points: 200, question: "From what material did Michelangelo carve his 'David', considering the block was deemed ruined by a previous master?", answer: "Marble", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc300', category: 'Sculpture', points: 300, question: "Auguste Rodin created this sculpture as part of a large-scale composition called 'The Gates of Hell', inspired by Dante.", answer: "The Thinker", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1555899434-94d1368aa7af?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc400', category: 'Sculpture', points: 400, question: "What is the name of the bronze casting technique where the wax model is melted and drained out?", answer: "Lost-wax casting (Cire perdue)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1508189860359-777d945909ef?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc500', category: 'Sculpture', points: 500, question: "Which 20th-century sculptor is known for his signature 'skinny', elongated human figures?", answer: "Alberto Giacometti", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=800&auto=format&fit=crop" },
+
+    // Auction Passions
+    { id: 'ap100', category: 'Auction Passions', points: 100, question: "In 1990, 'Portrait of Dr. Gachet' by this 'mad' Dutchman became the most expensive painting in the world at the time.", answer: "Vincent van Gogh", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap200', category: 'Auction Passions', points: 200, question: "In 2018, a painting by this anonymous artist self-destructed via a hidden shredder immediately after the gavel fell at Sotheby’s.", answer: "Banksy", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap300', category: 'Auction Passions', points: 300, question: "What is the name of the most expensive painting in history, sold for $450 million and attributed to Leonardo da Vinci?", answer: "Salvator Mundi", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap400', category: 'Auction Passions', points: 400, question: "Which series of paintings by Claude Monet, depicting the same location at different times of day, frequently sets auction records?", answer: "Haystacks (or Water Lilies)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap500', category: 'Auction Passions', points: 500, question: "The founder of which major auction house (one of the 'big two') started as a bookseller in 1744?", answer: "Samuel Baker (Sotheby’s)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1518998053574-53ee7961a981?q=80&w=800&auto=format&fit=crop" },
+  ],
+  ru: [
+    // Скрытые детали
+    { id: 'hd100', category: 'Скрытые детали', points: 100, question: "На картине «Мона Лиза» у героини отсутствуют именно эти элементы лица, что долгое время считалось загадкой, хотя, скорее всего, они просто стерлись при чистке.", answer: "Брови", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1544767618-c5ef3d845ad4?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd200', category: 'Скрытые детали', points: 200, question: "В 2011 году под микроскопом в правом зрачке Джоконды обнаружили эти две латинские буквы, вероятно, инициалы автора.", answer: "LV (Леонардо да Винчи)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1627444211158-b0a70f3f20d6?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd300', category: 'Скрытые детали', points: 300, question: "На полотне «Ночной дозор» Рембрандта среди толпы суровых мушкетеров выделяется ярко освещенная девочка. К ее поясу прикреплена именно эта птица.", answer: "Курица (символ отряда)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd400', category: 'Скрытые детали', points: 400, question: "Исследование картины «Послы» Ганса Гольбейна под углом открывает, что странное пятно в нижней части картины — это...", answer: "Череп", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?q=80&w=800&auto=format&fit=crop" },
+    { id: 'hd500', category: 'Скрытые детали', points: 500, question: "На картине Ван Гога «Ночная терраса кафе» некоторые исследователи видят зашифрованную сцену из Евангелия. Какую именно?", answer: "Тайная вечеря", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=800&auto=format&fit=crop" },
+    
+    // Архитектура
+    { id: 'ar100', category: 'Архитектура', points: 100, question: "Этот стиль, господствовавший в Европе в XII–XV веках, получил свое название от германских племен, хотя они к нему отношения не имели.", answer: "Готика", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1548560781-a7a07d9d33db?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar200', category: 'Архитектура', points: 200, question: "Этот знаменитый «падающий» объект в Пизе на самом деле является не самостоятельным зданием, а частью соборного ансамбля. Как называется такой тип башни?", answer: "Кампанила (колокольня)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1543429776-067bb207185c?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar300', category: 'Архитектура', points: 300, question: "Изначально это здание в Париже строилось как церковь святой Женевьевы, но в итоге стало усыпальницей великих людей Франции.", answer: "Пантеон", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1590429448256-c3a4405aef75?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar400', category: 'Архитектура', points: 400, question: "Как называется верхняя женская часть греческого храма или фигура женщины, заменяющая колонну?", answer: "Кариатида", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1605333396915-47ed6b68a00e?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ar500', category: 'Архитектура', points: 500, question: "Этот архитектор-модернист сказал: «Дом — это машина для жилья».", answer: "Ле Корбюзье", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" },
+
+    // Цвет в искусстве
+    { id: 'ca100', category: 'Цвет в искусстве', points: 100, question: "Этот цвет был самым дорогим в эпоху Возрождения, так как его добывали из полудрагоценного камня лазурита.", answer: "Ультрамарин (синий)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1576444399940-058864005391?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca200', category: 'Цвет в искусстве', points: 200, question: "В «голубой период» своего творчества этот художник писал нищих и акробатов в холодных тонах из-за глубокой депрессии.", answer: "Пабло Пикассо", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca300', category: 'Цвет в искусстве', points: 300, question: "Какой художник считается изобретателем «антропометрии», где он использовал запатентованный им ярко-синий оттенок?", answer: "Ив Кляйн", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca400', category: 'Цвет в искусстве', points: 400, question: "В 1814 году из-за ошибки в составе краски картина «Пир Валтасара» этого автора начала стремительно чернеть. Кто автор?", answer: "Рембрандт", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1582201942988-13e60e4556ee?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ca500', category: 'Цвет в искусстве', points: 500, question: "Как называется техника живописи, при которой картина создается из множества мелких точек чистого цвета?", answer: "Пуантилизм", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1578321272176-b7bbc067985c?q=80&w=800&auto=format&fit=crop" },
+
+    // Скульптура
+    { id: 'sc100', category: 'Скульптура', points: 100, question: "Эта античная статуя лишилась рук во время потасовки между французскими моряками и турецкими властями на острове Милос.", answer: "Венера Милосская", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1549887534-1541e9326642?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc200', category: 'Скульптура', points: 200, question: "Из какого материала Микеланджело изваял своего «Давида», если учесть, что глыба считалась испорченной предыдущим мастером?", answer: "Мрамор", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc300', category: 'Скульптура', points: 300, question: "Огюст Роден создал эту скульптуру как часть масштабной композиции «Врата ада», вдохновленной Данте.", answer: "«Мыслитель»", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1555899434-94d1368aa7af?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc400', category: 'Скульптура', points: 400, question: "Как называется техника отливки бронзовых статуй, при которой внутренняя модель из воска расплавляется и вытекает?", answer: "Метод утраченного воска (Cire perdue)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1508189860359-777d945909ef?q=80&w=800&auto=format&fit=crop" },
+    { id: 'sc500', category: 'Скульптура', points: 500, question: "Кто из великих скульпторов ХХ века известен своими «тощими», вытянутыми человеческими фигурами?", answer: "Альберто Джакометти", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=800&auto=format&fit=crop" },
+
+    // Аукционные страсти
+    { id: 'ap100', category: 'Аукционные страсти', points: 100, question: "Картина этого «безумного» голландца «Портрет доктора Гаше» в 1990 году стала самой дорогой в мире на тот момент.", answer: "Винсент Ван Гог", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap200', category: 'Аукционные страсти', points: 200, question: "В 2018 году картина этого анонимного художника самоуничтожилась с помощью шредера сразу после удара молотка на аукционе Sotheby’s.", answer: "Бэнкси", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap300', category: 'Аукционные страсти', points: 300, question: "Как называется самая дорогая картина в истории, проданная за $450 млн и приписываемая Леонардо да Винчи?", answer: "«Спаситель мира» (Salvator Mundi)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap400', category: 'Аукционные страсти', points: 400, question: "Какая серия картин Клода Моне, изображающая одно и то же место в разное время суток, чаще всего ставит рекорды на торгах?", answer: "«Стога» (или «Кувшинки»)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=800&auto=format&fit=crop" },
+    { id: 'ap500', category: 'Аукционные страсти', points: 500, question: "Основатель какого аукционного дома (одного из «большой двойки») начинал как книготорговец в 1744 году?", answer: "Сэмюэл Бейкер (Sotheby’s)", isAnswered: false, imageUrl: "https://images.unsplash.com/photo-1518998053574-53ee7961a981?q=80&w=800&auto=format&fit=crop" },
+  ],
+};
+
+export const FINAL_QUESTION_DATA = {
+  en: {
+    question: "Which iconic museum was originally built as a fortress in the 12th century and then used as a royal palace before becoming a public museum during the French Revolution?",
+    answer: "The Louvre",
+    category: "FINAL ROUND",
+    imageUrl: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
   },
+  ru: {
+    question: "Какой культовый музей изначально был построен как крепость в XII веке, затем использовался как королевский дворец, а во время Французской революции стал общественным музеем?",
+    answer: "Лувр",
+    category: "ФИНАЛЬНЫЙ РАУНД",
+    imageUrl: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"
+  }
+};
+
+export const UI_STRINGS = {
   en: {
     title: "Art Quest",
-    author: "ELIZAVETA ALEKSEEVA 2026",
-    score: "Score",
-    back: "Back",
-    showAnswer: "Show Answer",
-    correct: "Correct (+{points})",
+    totalScore: "Total Score",
+    startExhibition: "Start Exhibition",
+    introTitle: "Artistry &",
+    introSubtitle: "Intrigue",
+    introDesc: "Test your knowledge of the world's most famous masterpieces, architects, and hidden secrets.",
+    points: "Points",
+    revealAnswer: "Reveal Answer",
+    correct: "Correct",
     incorrect: "Incorrect",
-    finalRound: "Final Round",
-    startFinal: "Go to Final Question",
-    congrats: "Congratulations!",
-    finalScore: "Your Final Score",
-    restart: "Restart Game",
-    categories: {
-      hidden: "Hidden Details",
-      arch: "Architecture",
-      color: "Color in Art",
-      sculpt: "Sculpture",
-      auctions: "Auction Passions"
-    },
-    questions: {
-      hidden: [
-        { q: "In the Mona Lisa, the subject is missing these facial elements, which was long a mystery.", a: "Eyebrows", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/402px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" },
-        { q: "In 2011, these two Latin letters were found under a microscope in Mona Lisa's right pupil.", a: "LV (Leonardo da Vinci)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800" },
-        { q: "In Rembrandt's 'Night Watch', a girl stands out in the crowd. Which bird is attached to her belt?", a: "Chicken", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Night_Watch_-_de_nachtwacht.jpg/1200px-The_Night_Watch_-_de_nachtwacht.jpg" },
-        { q: "In Holbein's 'The Ambassadors', viewing the bottom at an angle reveals this hidden object.", a: "A Skull", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg/1200px-Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg" },
-        { q: "In Van Gogh's 'Café Terrace at Night', researchers see a coded scene from the Gospel. Which one?", a: "The Last Supper", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Vincent_Willem_van_Gogh_-_Caf%C3%A9_Terrace_at_Night_-_Google_Art_Project.jpg/800px-Vincent_Willem_van_Gogh_-_Caf%C3%A9_Terrace_at_Night_-_Google_Art_Project.jpg" }
-      ],
-      arch: [
-        { q: "This style, dominant in Europe in the XII–XV centuries, was named after Germanic tribes.", a: "Gothic", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1548545595-59b4349479b0?w=800" },
-        { q: "What is the name for this type of tower, like the Leaning Tower of Pisa?", a: "Campanile (Bell Tower)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=800" },
-        { q: "This Paris building was originally a church but became a tomb for France's great figures.", a: "Panthéon", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1503917988258-f197e2f4191b?w=800" },
-        { q: "A female figure used in place of a column in Greek architecture?", a: "Caryatid", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1603566233405-f9383637e1b5?w=800" },
-        { q: "Which modernist architect said: 'A house is a machine for living in'?", a: "Le Corbusier", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Le_Corbusier_cropped.jpg/800px-Le_Corbusier_cropped.jpg" }
-      ],
-      color: [
-        { q: "The most expensive color of the Renaissance, made from lapis lazuli.", a: "Ultramarine (Blue)", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800" },
-        { q: "During which period did Picasso paint beggars and acrobats in cold tones?", a: "Blue Period", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Old_guitarist_chicago.jpg/800px-Old_guitarist_chicago.jpg" },
-        { q: "Which artist is known for using a patented bright blue shade?", a: "Yves Klein", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/International_Klein_Blue.jpg/400px-International_Klein_Blue.jpg" },
-        { q: "Rembrandt's 'Belshazzar's Feast' began to turn black due to a paint formula error. Who's the artist?", a: "Rembrandt", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rembrandt-Belsazar.jpg/1200px-Rembrandt-Belsazar.jpg" },
-        { q: "A technique using many small dots of pure color.", a: "Pointillism", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800" }
-      ],
-      sculpt: [
-        { q: "This statue lost its arms during a brawl on the island of Milos.", a: "Venus de Milo", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1549887534-1541e9326642?w=800" },
-        { q: "What material did Michelangelo use for his 'David'?", a: "Marble", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=800" },
-        { q: "Rodin created this sculpture as part of 'The Gates of Hell'.", a: "The Thinker", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1605646199464-9464406cc0a7?w=800" },
-        { q: "A casting technique where a wax model is melted and drained.", a: "Lost-wax method", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1554188248-986adbb73be4?w=800" },
-        { q: "Which XX century sculptor is known for thin, elongated human figures?", a: "Alberto Giacometti", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Walking_Man_I.jpg/300px-Walking_Man_I.jpg" }
-      ],
-      auctions: [
-        { q: "This 'crazy' Dutchman's 'Portrait of Dr. Gachet' became the world's most expensive painting in 1990.", a: "Vincent van Gogh", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=800" },
-        { q: "In 2018, which anonymous artist's painting shredded itself after being auctioned?", a: "Banksy", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800" },
-        { q: "The most expensive painting ever sold ($450M), attributed to Leonardo.", a: "Salvator Mundi", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/1200px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg" },
-        { q: "Which series by Claude Monet frequently sets records at auction?", a: "Haystacks or Water Lilies", img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1576016773322-80c2793d7e5f?w=800" },
-        { q: "Which auction house founder started as a bookseller in 1744?", a: "Sotheby's", img: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sothebys_London_2011.jpg/800px-Sothebys_London_2011.jpg" }
-      ]
-    },
-    finalQuestion: {
-      q: "Which Chinese-American architect designed the Louvre Pyramid, the museum's modern symbol?",
-      a: "I. M. Pei",
-      img: "https://images.weserv.nl/?url=https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200"
-    }
+    finalRound: "ENTER FINAL ROUND",
+    finalTitle: "The Final Gallery",
+    finalSubtitle: "For Eternal Glory",
+    showMasterpiece: "SHOW THE MASTERPIECE",
+    finishExhibition: "Finish Exhibition",
+    playAgain: "Play Again",
+    finalScoreLabel: "Final Score",
+    answerLabel: "Answer"
+  },
+  ru: {
+    title: "Арт-Квест",
+    totalScore: "Общий счет",
+    startExhibition: "Начать выставку",
+    introTitle: "Искусство &",
+    introSubtitle: "Интриги",
+    introDesc: "Проверьте свои знания о самых знаменитых шедеврах мира, архитекторах и скрытых тайнах.",
+    points: "Очков",
+    revealAnswer: "Показать ответ",
+    correct: "Верно",
+    incorrect: "Неверно",
+    finalRound: "ПЕРЕЙТИ К ФИНАЛУ",
+    finalTitle: "Финальная Галерея",
+    finalSubtitle: "Ради вечной славы",
+    showMasterpiece: "ПОКАЗАТЬ ШЕДЕВР",
+    finishExhibition: "Завершить выставку",
+    playAgain: "Играть снова",
+    finalScoreLabel: "Итоговый счет",
+    answerLabel: "Ответ"
   }
 };
