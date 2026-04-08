@@ -10,10 +10,12 @@ import {
   RefreshCcw,
   Palette,
   TowerControl as Tower,
-  History,
+  History as HistoryIcon,
   Hammer,
   Gem,
-  Languages
+  Languages,
+  ImageOff,
+  Loader2
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { 
@@ -31,6 +33,41 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   ca: <Palette className="w-5 h-5" />,
   sc: <Gem className="w-5 h-5" />,
   ap: <Hammer className="w-5 h-5" />,
+};
+
+// Robust Image Component with loading/error states
+const ArtImage = ({ src, alt }: { src: string; alt: string }) => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  return (
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-zinc-900/50 flex items-center justify-center">
+      {loading && !error && (
+        <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
+          <Loader2 className="w-8 h-8 text-purple-500 animate-spin" />
+        </div>
+      )}
+      
+      {error ? (
+        <div className="flex flex-col items-center gap-2 text-zinc-500 p-4 text-center">
+          <ImageOff className="w-12 h-12 opacity-20" />
+          <p className="text-xs uppercase font-bold tracking-widest">{alt}</p>
+        </div>
+      ) : (
+        <img 
+          src={src} 
+          alt={alt}
+          onLoad={() => setLoading(false)}
+          onError={() => {
+            setLoading(false);
+            setError(true);
+          }}
+          className={`w-full h-full object-cover transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+    </div>
+  );
 };
 
 export default function App() {
@@ -261,27 +298,27 @@ export default function App() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="max-w-3xl mx-auto w-full"
               >
-                <div className="glass-morphism rounded-[2.5rem] p-12 relative overflow-hidden">
+                <div className="glass-morphism rounded-[2.5rem] p-8 sm:p-12 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
                   
-                  <div className="relative z-10 space-y-12">
+                  <div className="relative z-10 space-y-8 sm:space-y-12">
                     <div className="flex justify-between items-start">
                       <div className="space-y-1">
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-purple-400">
                           {activeQuestion.category}
                         </span>
-                        <h3 className="text-4xl font-bold tracking-tight">{activeQuestion.points} {ui.points}</h3>
+                        <h3 className="text-3xl sm:text-4xl font-bold tracking-tight">{activeQuestion.points} {ui.points}</h3>
                       </div>
                       <button 
                         onClick={() => setGameState('board')}
-                        className="w-12 h-12 rounded-full glass-button flex items-center justify-center"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-button flex items-center justify-center"
                       >
-                        <X className="w-6 h-6" />
+                        <X className="w-5 h-5 sm:w-6 sm:h-6" />
                       </button>
                     </div>
 
-                    <div className="min-h-[200px] flex items-center">
-                      <p className="text-3xl leading-snug font-medium text-zinc-100 italic">
+                    <div className="min-h-[150px] flex items-center">
+                      <p className="text-2xl sm:text-3xl leading-snug font-medium text-zinc-100 italic">
                         "{activeQuestion.question}"
                       </p>
                     </div>
@@ -297,16 +334,10 @@ export default function App() {
                       ) : (
                         <div className="space-y-8">
                           <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="relative aspect-video rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
                           >
-                            <img 
-                              src={activeQuestion.imageUrl} 
-                              alt={activeQuestion.answer}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                            <ArtImage src={activeQuestion.imageUrl} alt={activeQuestion.answer} />
                           </motion.div>
 
                           <motion.div
@@ -356,15 +387,15 @@ export default function App() {
                 className="max-w-3xl mx-auto w-full text-center space-y-12"
               >
                 <div className="space-y-4">
-                  <div className="w-24 h-24 mx-auto rounded-full liquid-gradient flex items-center justify-center shadow-2xl mb-8">
-                    <History className="w-12 h-12 text-white" />
-                  </div>
+<div className="w-24 h-24 mx-auto rounded-full liquid-gradient flex items-center justify-center shadow-2xl mb-8">
+  <HistoryIcon className="w-12 h-12 text-white" />
+</div>
                   <h2 className="text-6xl font-black tracking-tighter uppercase italic">{ui.finalTitle}</h2>
                   <p className="text-zinc-400 text-xl font-medium tracking-wide">{ui.finalSubtitle}</p>
                 </div>
 
-                <div className="glass-morphism rounded-[2.5rem] p-12 space-y-12">
-                  <p className="text-3xl leading-relaxed italic">
+                <div className="glass-morphism rounded-[2.5rem] p-8 sm:p-12 space-y-12">
+                  <p className="text-2xl sm:text-3xl leading-relaxed italic">
                     "{finalQuestion.question}"
                   </p>
 
@@ -381,20 +412,10 @@ export default function App() {
                       animate={{ opacity: 1, y: 0 }}
                       className="space-y-8"
                     >
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="relative aspect-video rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(139,92,246,0.3)]"
-                      >
-                        <img 
-                          src={finalQuestion.imageUrl} 
-                          alt={finalQuestion.answer}
-                          className="w-full h-full object-cover"
-                        />
-                      </motion.div>
+                      <ArtImage src={finalQuestion.imageUrl} alt={finalQuestion.answer} />
 
                       <div className="p-8 rounded-2xl bg-white/10 border border-white/20">
-                        <p className="text-5xl font-black text-gradient">{finalQuestion.answer}</p>
+                        <p className="text-4xl sm:text-5xl font-black text-gradient">{finalQuestion.answer}</p>
                       </div>
                       <button
                         onClick={() => setGameState('results')}
