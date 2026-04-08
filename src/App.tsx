@@ -297,8 +297,22 @@ export default function App() {
                       ) : (
                         <div className="space-y-8">
                           <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="relative aspect-video rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
+                          >
+                            <img 
+                              src={activeQuestion.imageUrl} 
+                              alt={activeQuestion.answer}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                          </motion.div>
+
+                          <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
                             className="p-6 rounded-2xl bg-white/10 border border-white/20 text-center"
                           >
                             <p className="text-[10px] uppercase tracking-widest font-black text-zinc-400 mb-2">{ui.answerLabel}</p>
@@ -367,6 +381,18 @@ export default function App() {
                       animate={{ opacity: 1, y: 0 }}
                       className="space-y-8"
                     >
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="relative aspect-video rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_50px_rgba(139,92,246,0.3)]"
+                      >
+                        <img 
+                          src={finalQuestion.imageUrl} 
+                          alt={finalQuestion.answer}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+
                       <div className="p-8 rounded-2xl bg-white/10 border border-white/20">
                         <p className="text-5xl font-black text-gradient">{finalQuestion.answer}</p>
                       </div>
